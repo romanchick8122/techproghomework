@@ -5,7 +5,7 @@
 TEST(min, MinIntegers) {
   EXPECT_EQ(1, min(1, 3));
   EXPECT_EQ(1000000007, min(1000000007, 1000000008));
-  EXPECT_EQ(-6, mul(-6, 100));
+  EXPECT_EQ(-6, min(-6, 100));
 }
 
 TEST(max, MaxIntegers) {
