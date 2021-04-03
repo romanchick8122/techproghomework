@@ -18,7 +18,9 @@ add_executable(MainLib main_lib.cpp)
 
 target_link_libraries(MainLib buffer)
 
+set_target_properties(MainLib PROPERTIES PUBLIC_HEADER ${PROJECT_SOURCE_DIR}/include/buffer.h)
 install(TARGETS Main MainLib buffer
         RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin
-        LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+        LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+        PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
 set_target_properties(MainLib PROPERTIES INSTALL_RPATH "$ORIGIN/../lib")
