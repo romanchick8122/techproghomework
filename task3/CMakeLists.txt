@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 option(ARM_BUILD "ON if building for arm" OFF)
 option(TOOLCHAIN "Path to compiler toolchain")
 option(CMAKE_INSTALL_PREFIX "Path to install prefix")
+set(CMAKE_CXX_COMPILER ${TOOLCHAIN}/aarch64-linux-gnu-c++)
 
 project(SimpleLibrary)
 
