@@ -9,7 +9,7 @@ cpr::response WeatherMock::Get(const std::string& city, const int& url) {
     s.str(city);
     int t1, t2;
     s >> t1 >> t2;
-    cpr::response ret;
+    cpr::Response ret;
     ret.status_code = 200;
     ret.text = "{'main':{'temp':" + std::to_string(t1) + "}, 'list':['','','','','','',{'main':{'temp': " +
         std::to_string(t2) + "}}]}";
