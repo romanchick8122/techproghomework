@@ -13,6 +13,7 @@ TEST(A, B) {
     EXPECT_THROW(GetTree("./TreeTestCaseTmpDir/file.txt", false), std::invalid_argument);
     auto node1 = GetTree("./TreeTestCaseTmpDir", true);
     auto node2 = GetTree("./TreeTestCaseTmpDir", false);
+    EXPECT_FALSE(node1 == node2);
     EXPECT_EQ(node1.name, "TreeTestCaseTmpDir");
     EXPECT_EQ(node2.name, "TreeTestCaseTmpDir");
     EXPECT_TRUE(node1.is_dir);
