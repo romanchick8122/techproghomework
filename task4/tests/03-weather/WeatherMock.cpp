@@ -4,7 +4,7 @@
 
 #include <sstream>
 #include "WeatherMock.h"
-cpr::Response WeatherMock::Get(const std::string& city, const int& url) {
+cpr::Response WeatherMock::Get(const std::string& city, const cpr::Url& url) {
     std::stringstream s;
     s.str(city);
     int t1, t2;
