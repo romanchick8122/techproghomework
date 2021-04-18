@@ -5,8 +5,6 @@
 
 #include "TreeTestCase.h"
 #include "Tree.h"
-#include "TreeTestCase.h"
-#include "Tree.h"
 TEST(A, B) {
     boost::filesystem::create_directory("./TreeTestCaseTmpDir");
     boost::filesystem::create_directory("./TreeTestCaseTmpDir/inner");
