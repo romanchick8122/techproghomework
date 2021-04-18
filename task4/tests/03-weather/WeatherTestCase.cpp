@@ -7,6 +7,7 @@
 
 TEST(A, B) {
     WeatherMock mock;
+    mock.SetApiKey("key");
     ASSERT_EQ(mock.GetTemperature("1 2"), 1);
     ASSERT_EQ(mock.GetDifferenceString("1 2", "2 3"), "Weather in 1 2 is colder than in 2 3 by 1 degrees");
     ASSERT_EQ(mock.GetDifferenceString("2 2", "1 3"), "Weather in 2 2 is warmer than in 1 3 by 1 degrees");
