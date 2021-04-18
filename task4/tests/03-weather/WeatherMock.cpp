@@ -5,6 +5,12 @@
 #include <sstream>
 #include "WeatherMock.h"
 cpr::Response WeatherMock::Get(const std::string& city, const cpr::Url& url) {
+    if (city == "bad") {
+        cpr::Response ret;
+        ret.status_code = 400;
+        ret.text = "{}";
+        return ret;
+    }
     std::stringstream s;
     s.str(city);
     int t1, t2;
