@@ -25,7 +25,7 @@ TEST(A, B) {
             EXPECT_EQ(sn.name, "file.txt");
         }
     }
-    FilterEmptyNodes(node2, ".");
+    FilterEmptyNodes(node2, "./TreeTestCaseTmpDir");
     EXPECT_FALSE(boost::filesystem::exists("./TreeTestCaseTmpDir/inner"));
     boost::filesystem::remove_all("TreeTestCaseTmpDir");
 }
