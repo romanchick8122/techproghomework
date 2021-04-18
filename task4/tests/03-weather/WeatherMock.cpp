@@ -11,7 +11,7 @@ cpr::Response WeatherMock::Get(const std::string& city, const cpr::Url& url) {
     s >> t1 >> t2;
     cpr::Response ret;
     ret.status_code = 200;
-    ret.text = "{\"main\":{\"temp\":" + std::to_string(t1) + "}, \"list\":[\"\",\"\",\"\",\"\",\"\",\"\",{\"main\":{\"temp\": " +
+    ret.text = "{\"main\":{\"temp\":" + std::to_string(t1) + "}, \"list\":[\"\",\"\",\"\",\"\",\"\",\"\",\"\",{\"main\":{\"temp\": " +
         std::to_string(t2) + "}}]}";
     std::cerr << ret.text << "\n";
     return ret;
