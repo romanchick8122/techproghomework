@@ -5,7 +5,7 @@
 #include "WeatherTestCase.h"
 #include "WeatherMock.h"
 
-TEST(A, B) {
+TEST(Weather, Mocked) {
     WeatherMock mock;
     mock.SetApiKey("key");
     EXPECT_EQ(mock.GetTemperature("1 2"), 1);

@@ -5,7 +5,7 @@
 
 #include "TreeTestCase.h"
 #include "Tree.h"
-TEST(A, B) {
+TEST(Tree, TestCase) {
     boost::filesystem::create_directory("./TreeTestCaseTmpDir");
     boost::filesystem::create_directory("./TreeTestCaseTmpDir/inner");
     std::ofstream file("./TreeTestCaseTmpDir/file.txt");
