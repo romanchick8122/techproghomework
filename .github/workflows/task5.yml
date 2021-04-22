@@ -11,5 +11,5 @@ jobs:
         with:
           ref: task5
       - name: Build
-        run: cmake . | make C
+        run: cd task5 | cmake . | make C | cd ..
       
