@@ -1,0 +1,13 @@
+name: Task5
+on:
+  push:
+    branches: [ task5 ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  Task5:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        run: cmake . | make C
+      
