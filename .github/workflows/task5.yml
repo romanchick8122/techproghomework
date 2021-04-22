@@ -13,7 +13,8 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: 'google/googletest'
-          path: '3rdparty'
+          path: '3rdparty/googletest'
+      - name: GoogleTestEnv
+        run: export GOOGLE_TEST_DIR=googletest
       - name: Build
-        working-directory: task5
-        run: cmake . | make C | tree ./.. 
+        run: cmake task5 | make C | tree ./.. 
