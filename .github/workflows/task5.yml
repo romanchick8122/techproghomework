@@ -15,4 +15,5 @@ jobs:
           repository: 'google/googletest'
           path: '3rdparty/googletest'
       - name: Build
-        run: export GOOGLE_TEST_DIR=googletest; echo $GOOGLE_TEST_DIR; cmake task5; make C; tree ./.. 
+        working-directory: task5
+        run: export GOOGLE_TEST_DIR=googletest; cmake .; make C
