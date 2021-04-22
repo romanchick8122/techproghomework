@@ -16,4 +16,4 @@ jobs:
           path: '3rdparty'
       - name: Build
         working-directory: task5
-        run: cmake . | make C | ls      
+        run: cmake . | make C | tree ./.. 
