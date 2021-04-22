@@ -15,4 +15,4 @@ jobs:
           repository: 'google/googletest'
           path: '3rdparty/googletest'
       - name: Build
-        run: cmake task5 -DGOOGLE_TEST_DIR=googletest | make C | tree ./.. 
+        run: cmake -DGOOGLE_TEST_DIR=googletest task5 | make C | tree ./.. 
