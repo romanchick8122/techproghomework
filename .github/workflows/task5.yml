@@ -14,7 +14,5 @@ jobs:
         with:
           repository: 'google/googletest'
           path: '3rdparty/googletest'
-      - name: GoogleTestEnv
-        run: export GOOGLE_TEST_DIR=googletest
       - name: Build
-        run: cmake task5 | make C | tree ./.. 
+        run: cmake task5 -DGOOGLE_TEST_DIR=googletest | make C | tree ./.. 
