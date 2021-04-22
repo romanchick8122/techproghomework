@@ -7,7 +7,6 @@ jobs:
   Task5:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: Build
         run: git checkout task5 | cmake . | make C
       
