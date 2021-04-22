@@ -15,4 +15,4 @@ jobs:
           repository: 'google/googletest'
           path: '3rdparty/googletest'
       - name: Build
-        run: export GOOGLE_TEST_DIR=googletest; pwd; (cmake -DCMAKE_BINARY_DIR=cmake_build task5 && make C) | tree ./.. 
+        run: export GOOGLE_TEST_DIR=googletest; cmake -DCMAKE_BINARY_DIR=task5 task5; make C
