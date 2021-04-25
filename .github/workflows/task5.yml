@@ -22,6 +22,6 @@ jobs:
       - name: Test
         uses: akhtyamovpavel/ActionGtestReport@v0.0.9
         with:
-          exec-path:  ${{github.workspace}}/task5/bin/CTestExe
-          report-path: "../report.xml"
-          working-directory: ${{github.workspace}}/task5/bin/
+          exec-path:  'task5/bin/CTestExe'
+          report-path: '../report.xml'
+          working-directory: 'task5/bin/'
