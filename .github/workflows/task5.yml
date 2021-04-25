@@ -21,4 +21,4 @@ jobs:
         run: mkdir build; cd build; cmake ..; cmake --build .
       - name: Test
         working-directory: task5
-        run: tree
+        run: tree build
