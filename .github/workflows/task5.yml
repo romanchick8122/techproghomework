@@ -18,10 +18,13 @@ jobs:
           path: '${{github.workspace}}/task5/3rdparty'
       - name: Build
         working-directory: '${{github.workspace}}/task5'
-        run: mkdir build; cd build; cmake ..; cmake --build .; tree
+        run: mkdir build; cd build; cmake ..; cmake --build .; cd ..; mkdir testtmp
       - name: Test
         uses: akhtyamovpavel/ActionGtestReport@v0.0.9
         with:
           exec-path:  '${{github.workspace}}/task5/bin/CTestExe'
           report-path: '../report.xml'
-          working-directory: '${{github.workspace}}/task5/bin/'
+          working-directory: '${{github.workspace}}/task5/testtmp/'
+      - name: debug
+        working-directory: '${{github.workspace}}/task5'
+        run: tree
