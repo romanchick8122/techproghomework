@@ -33,4 +33,11 @@ jobs:
         with:
           name: 'test-report'
           path: '${{github.workspace}}/task5/bin/report.xml'
+      - name: UploadArtifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'Distributive'
+          path: |
+            './task5/bin'
+            './task5/lib'
         
