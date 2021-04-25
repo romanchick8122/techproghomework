@@ -16,4 +16,4 @@ jobs:
           path: '3rdparty'
       - name: Build
         working-directory: task5
-        run: export GOOGLE_TEST_DIR=googletest; cmake .; make C
+        run: mkdir build; cd build; cmake ..; cmake --build .
