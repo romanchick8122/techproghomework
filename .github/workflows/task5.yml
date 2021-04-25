@@ -7,10 +7,12 @@ jobs:
   Task5:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Clone self
+        uses: actions/checkout@v2
         with:
           ref: task5
-      - uses: actions/checkout@v2
+      - name: Clone googletest
+        uses: actions/checkout@v2
         with:
           repository: 'google/googletest'
           path: '3rdparty'
