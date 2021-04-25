@@ -38,6 +38,6 @@ jobs:
         with:
           name: 'Distributive'
           path: |
-            './task5/bin'
-            './task5/lib'
+            task5/bin
+            task5/lib
         
