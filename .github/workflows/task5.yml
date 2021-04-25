@@ -23,7 +23,7 @@ jobs:
         uses: akhtyamovpavel/ActionGtestReport@v0.0.9
         with:
           exec-path:  './CTestExe'
-          report-path: '../report.xml'
+          report-path: './report.xml'
           working-directory: './task5/bin/'
       - name: debug
         working-directory: '${{github.workspace}}/task5'
