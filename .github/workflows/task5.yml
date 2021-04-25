@@ -22,7 +22,7 @@ jobs:
       - name: Test
         uses: akhtyamovpavel/ActionGtestReport@v0.0.9
         with:
-          exec-path:  '${{github.workspace}}/task5/bin/CTestExe'
+          exec-path:  './CTestExe'
           report-path: '../report.xml'
           working-directory: './task5/bin/'
       - name: debug
