@@ -28,3 +28,9 @@ jobs:
       - name: debug
         working-directory: '${{github.workspace}}/task5'
         run: tree
+      - name: UploadTestReport
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'test-report'
+          path: '${{github.workspace}}/task5/bin/report.xml'
+        
