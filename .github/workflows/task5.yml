@@ -18,4 +18,7 @@ jobs:
           path: 'task5/3rdparty'
       - name: Build
         working-directory: task5
-        run: tree ..; mkdir build; cd build; cmake ..; cmake --build .
+        run: mkdir build; cd build; cmake ..; cmake --build .
+      - name: Test
+        working-directory: task5
+        run: tree
